@@ -23,7 +23,7 @@ soup = BeautifulSoup(page, "html.parser") #옵션이 4가지가 있음
 
 #내부 문자열 추출
 for item in soup.find_all("p"):
-    #컨텐츠: ~.text
+    #컨텐츠: ~.text 
     title = item.text.strip()
     title = title.replace("\n", "")
     print(title)
