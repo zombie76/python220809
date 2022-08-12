@@ -1,9 +1,6 @@
 #Web2.py
 
 #웹서버에 요청
-from cgitb import text
-from dataclasses import dataclass
-from sqlite3 import paramstyle
 import urllib.request
 from bs4 import BeautifulSoup
 
@@ -22,3 +19,7 @@ print(link)
 # <td class="title">
 # 	<a href="/webtoon/detail?titleId=20853&amp;no=50&amp;weekday=fri" onclick="nclk_v2(event,'lst.title','20853','50')">마음의 소리 50화 &lt;격렬한 나의 하루&gt;</a>
 # </td>
+
+for item in cartoons:
+    title = item.find("a").text.strip()
+    print(title)
